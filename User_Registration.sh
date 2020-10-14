@@ -36,3 +36,15 @@ then
 else
         echo "PLease Enter a Valid Email Address";
 fi
+
+#UC4 Mobile Format
+
+read -p "Enter your mobile Number : " mob
+pat='^((\+){1}91){1}[ ]?[0-9]{10}$';
+
+if [[ $mob =~ $pat ]]
+then
+        echo "Yes Pattern Matched Successfully !";
+else
+        echo "PLease Enter a Valid Mobile Number";
+fi
