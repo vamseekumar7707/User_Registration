@@ -48,3 +48,17 @@ then
 else
         echo "PLease Enter a Valid Mobile Number";
 fi
+
+#UC5 PASSWORD Rule1
+
+read -p "Enter your 8-digit password : " password
+pat='[a-zA-Z0-9.@*!]{8,}';
+
+if [[ $password =~ $pat ]]
+then
+        echo "Yes Pattern Matched Successfully !";
+else
+        echo "Please Enter a Valid Password";
+fi
+
+
