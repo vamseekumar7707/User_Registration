@@ -62,3 +62,15 @@ else
 fi
 
 
+#UC6 PASSWORD Rule2
+
+
+read -p "Enter your 8-digit password : " password2
+pat='^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$';
+
+if [[ $password2 =~ $pat ]]
+then
+        echo "Yes Pattern Matched Successfully !";
+else
+        echo "Please Enter a Valid Password";
+fi
