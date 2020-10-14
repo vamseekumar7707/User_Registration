@@ -25,3 +25,14 @@ else
         echo "no";
 fi
 
+#UC3 Valid Email
+
+read -p "Enter your Email Address : " email
+pat='^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$';
+
+if [[ $email =~ $pat ]]
+then
+        echo "Yes Pattern Matched Successfully !";
+else
+        echo "PLease Enter a Valid Email Address";
+fi
