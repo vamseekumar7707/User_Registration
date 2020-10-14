@@ -98,3 +98,15 @@ then
 else
         echo "Please Enter a Valid Password";
 
+#UC9 Email Validation
+
+read -p "Enter your Email Address : " email
+
+pat='^[a-zA-Z0-9]+([.+-_][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-z]{2,4}([.][a-z]{2})*$';
+
+if [[ "$email" =~ "$pat" ]]
+then
+        echo "Yes Pattern Matched Successfully !";
+else
+        echo "PLease Enter a Valid Email Address";
+fi
