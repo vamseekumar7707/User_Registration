@@ -52,7 +52,7 @@ fi
 #UC5 PASSWORD Rule1
 
 read -p "Enter your 8-digit password : " password
-pat='[a-zA-Z0-9.@*!]{8,}';
+pat='[a-zA-Z0-9]{8,}';
 
 if [[ $password =~ $pat ]]
 then
@@ -86,3 +86,15 @@ then
 else
         echo "Please Enter a Valid Password";
 fi
+
+#UC8 PASSWORD Rule4
+
+read -p "Enter your 8-digit password : " password
+pat='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z.@*!\d]{8,}$';
+
+if [[ $password =~ $pat ]]
+then
+        echo "Yes Pattern Matched Successfully !";
+else
+        echo "Please Enter a Valid Password";
+
