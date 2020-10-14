@@ -12,3 +12,16 @@ then
 else
         echo "no";
 fi
+
+#UC2 Second Name
+
+read -p "Enter your Last Name : " Lname
+pat="^[A-Z][a-z]{2,}$";
+
+if [[ $Lname =~ $pat ]]
+then
+        echo "yes";
+else
+        echo "no";
+fi
+
