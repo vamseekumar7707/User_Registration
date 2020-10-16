@@ -78,7 +78,7 @@ fi
 #UC7 PASSWORD Rule3
 
 read -p "Enter your 8-digit password : " password
-pat='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$';
+pat='^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$#%*+]).{8,}$';
 
 if [[ $password =~ $pat ]]
 then
